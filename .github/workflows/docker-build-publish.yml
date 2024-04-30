@@ -45,7 +45,7 @@ jobs:
       with:
         images: |
           ${{ env.DH_IMAGE }}
-          ghcr.io/${{ env.GH_IMAGE }}
+          ${{ env.GH_IMAGE }}
         tags: |
           type=ref,event=tag,prefix=release-,suffix={{tag}}
           type=semver,pattern={{raw}},value=${{ steps.package-version.outputs.version }}
