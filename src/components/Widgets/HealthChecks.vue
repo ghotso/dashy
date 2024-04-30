@@ -48,7 +48,7 @@ export default {
   computed: {
     /* API endpoint, either for self-hosted or managed instance */
     endpoint() {
-      if (this.options.host) return `${this.options.host}/api/v1/checks`;
+      if (this.options.host) return `${this.options.host}/api/v3/checks`;
       return `${widgetApiEndpoints.healthChecks}`;
     },
     apiKey() {
